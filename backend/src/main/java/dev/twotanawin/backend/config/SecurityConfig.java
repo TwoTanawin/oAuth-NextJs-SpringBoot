@@ -20,7 +20,7 @@ public class SecurityConfig {
                     auth.anyRequest().authenticated();
                 })
                 .oauth2Login(oauth2 -> {
-                    oauth2.defaultSuccessUrl("/secured", true);
+                    oauth2.defaultSuccessUrl("http://localhost:3000/secured", true);
                 })
                 .formLogin(withDefaults())
                 .build();
